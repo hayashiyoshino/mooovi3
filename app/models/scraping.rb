@@ -29,7 +29,8 @@ class Scraping
     title = page.at('.entry-title').inner_text
     image_url = page.at('.entry-content img').get_attribute('src') if page.at('.entry-content img')
 
-    product = Product.where(title: title, image_url: image_url).first_or_initialize
+    product = Product.where(title: title).first_or_initialize
+    product.image_url = image_url
     product.save
   end
 end
