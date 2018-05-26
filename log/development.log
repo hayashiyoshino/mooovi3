@@ -4796,3 +4796,11 @@ ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie
 
 
 Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2018-05-26 16:11:00 +0900
+
+
+Started GET "/products/14" for ::1 at 2018-05-26 16:25:05 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  `products`.* FROM `products` WHERE `products`.`id` = 14 LIMIT 1
+  Rendered products/show.html.erb within layouts/review_site (0.9ms)
+Completed 200 OK in 32ms (Views: 9.2ms | ActiveRecord: 8.2ms)
