@@ -2,7 +2,8 @@ class RankingController < ApplicationController
   layout 'review_site'
   before_action :ranking
   def ranking
-    @ranking = Product.all.limit(3)
+    product_ids = Review.group(:product_id).order('count_product_id DESC').limit(3).count(:product_id).keys
+    @ranking = product_ids.map { |id| Product.find(id) }
   end
 
 end
