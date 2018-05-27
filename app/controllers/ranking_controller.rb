@@ -7,3 +7,4 @@ class RankingController < ApplicationController
   end
 
 end
+

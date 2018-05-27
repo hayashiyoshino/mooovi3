@@ -6997,3 +6997,268 @@ ActionController::RoutingError (No route matches [GET] "/images/icons/icon-movie
 
 
 Started GET "/assets/bambi-1.0.0.ttf?20140712" for ::1 at 2018-05-27 17:07:46 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20180527082111)
+  [1m[35m (35.4ms)[0m  CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (18.8ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (18.2ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) 
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180527082111')
+  [1m[36m (11.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (1.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi3_development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi3_development'
+  AND fk.table_name = 'reviews'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `reviews`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi3_development'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+
+
+Started GET "/users/sign_up" for ::1 at 2018-05-27 17:26:04 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered devise/shared/_links.html.erb (5.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (53.7ms)
+Completed 200 OK in 202ms (Views: 155.5ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2018-05-27 17:26:05 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2018-05-27 17:26:05 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2018-05-27 17:26:05 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2018-05-27 17:26:05 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2018-05-27 17:26:05 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2018-05-27 17:26:05 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2018-05-27 17:26:05 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2018-05-27 17:26:05 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2018-05-27 17:26:05 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2018-05-27 17:26:05 +0900
+
+
+Started GET "/users/sign_up" for ::1 at 2018-05-27 17:27:49 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2018-05-27 17:27:49 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2018-05-27 17:27:49 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2018-05-27 17:27:49 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2018-05-27 17:27:49 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2018-05-27 17:27:49 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2018-05-27 17:27:49 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2018-05-27 17:27:49 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2018-05-27 17:27:49 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2018-05-27 17:27:49 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2018-05-27 17:27:49 +0900
+
+
+Started GET "/users/sign_up" for ::1 at 2018-05-27 17:27:58 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2018-05-27 17:27:58 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2018-05-27 17:27:58 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2018-05-27 17:27:58 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2018-05-27 17:27:58 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2018-05-27 17:27:58 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2018-05-27 17:27:58 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2018-05-27 17:27:58 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2018-05-27 17:27:58 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2018-05-27 17:27:58 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2018-05-27 17:27:58 +0900
+
+
+Started GET "/users/sign_up" for ::1 at 2018-05-27 17:28:27 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2018-05-27 17:28:27 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2018-05-27 17:28:27 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2018-05-27 17:28:27 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2018-05-27 17:28:27 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2018-05-27 17:28:27 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2018-05-27 17:28:27 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2018-05-27 17:28:27 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2018-05-27 17:28:27 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2018-05-27 17:28:27 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2018-05-27 17:28:27 +0900
+
+
+Started GET "/users/sign_up" for ::1 at 2018-05-27 17:29:03 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2018-05-27 17:29:03 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2018-05-27 17:29:03 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2018-05-27 17:29:03 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2018-05-27 17:29:03 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2018-05-27 17:29:03 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2018-05-27 17:29:03 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2018-05-27 17:29:03 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2018-05-27 17:29:03 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2018-05-27 17:29:03 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2018-05-27 17:29:03 +0900
+
+
+Started GET "/users/sign_up" for ::1 at 2018-05-27 17:29:35 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 2157ms (Views: 2134.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2018-05-27 17:29:37 +0900
+
+
+Started GET "/assets/ranking.css?body=1" for ::1 at 2018-05-27 17:29:37 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2018-05-27 17:29:37 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2018-05-27 17:29:37 +0900
+
+
+Started GET "/assets/review_site.css?body=1" for ::1 at 2018-05-27 17:29:37 +0900
+
+
+Started GET "/assets/reviews.css?body=1" for ::1 at 2018-05-27 17:29:37 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2018-05-27 17:29:37 +0900
+
+
+Started GET "/assets/ranking.js?body=1" for ::1 at 2018-05-27 17:29:37 +0900
+
+
+Started GET "/assets/reviews.js?body=1" for ::1 at 2018-05-27 17:29:37 +0900
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2018-05-27 17:29:37 +0900
