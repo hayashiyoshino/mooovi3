@@ -8220,3 +8220,65 @@ You can opt into the new behavior and remove this warning by setting:
   config.active_record.raise_in_transactional_callbacks = true
 
  (called from <class:User> at /Users/hayashiyoshino/projects/mooovi3/app/models/user.rb:7)
+[paperclip] Trying to link app/assets/images/IMG_1632.jpg to /var/folders/v8/_wdmzq9s7tvb2gs01pgclx9r0000gn/T/799cd6bfc52d5baa8ba87191e42bdc0820180528-33281-1ycy7s6.jpg
+[paperclip] Trying to link /var/folders/v8/_wdmzq9s7tvb2gs01pgclx9r0000gn/T/799cd6bfc52d5baa8ba87191e42bdc0820180528-33281-1ycy7s6.jpg to /var/folders/v8/_wdmzq9s7tvb2gs01pgclx9r0000gn/T/799cd6bfc52d5baa8ba87191e42bdc0820180528-33281-g4f7fa.jpg
+Command :: file -b --mime '/var/folders/v8/_wdmzq9s7tvb2gs01pgclx9r0000gn/T/799cd6bfc52d5baa8ba87191e42bdc0820180528-33281-g4f7fa.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/v8/_wdmzq9s7tvb2gs01pgclx9r0000gn/T/799cd6bfc52d5baa8ba87191e42bdc0820180528-33281-1ycy7s6.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/v8/_wdmzq9s7tvb2gs01pgclx9r0000gn/T/799cd6bfc52d5baa8ba87191e42bdc0820180528-33281-1ycy7s6.jpg[0]'
+Command :: convert '/var/folders/v8/_wdmzq9s7tvb2gs01pgclx9r0000gn/T/799cd6bfc52d5baa8ba87191e42bdc0820180528-33281-1ycy7s6.jpg[0]' -auto-orient -resize "300x" -crop "300x300+0+50" +repage '/var/folders/v8/_wdmzq9s7tvb2gs01pgclx9r0000gn/T/16e19f7a6aa75e4cf41a94b7a9d5c95920180528-33281-1azr3iw'
+[paperclip] Trying to link /var/folders/v8/_wdmzq9s7tvb2gs01pgclx9r0000gn/T/16e19f7a6aa75e4cf41a94b7a9d5c95920180528-33281-1azr3iw to /var/folders/v8/_wdmzq9s7tvb2gs01pgclx9r0000gn/T/38174c19d27e1ea52d14f39cc780d4ba20180528-33281-1u4rdc
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/v8/_wdmzq9s7tvb2gs01pgclx9r0000gn/T/799cd6bfc52d5baa8ba87191e42bdc0820180528-33281-1ycy7s6.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/v8/_wdmzq9s7tvb2gs01pgclx9r0000gn/T/799cd6bfc52d5baa8ba87191e42bdc0820180528-33281-1ycy7s6.jpg[0]'
+Command :: convert '/var/folders/v8/_wdmzq9s7tvb2gs01pgclx9r0000gn/T/799cd6bfc52d5baa8ba87191e42bdc0820180528-33281-1ycy7s6.jpg[0]' -auto-orient -resize "100x" -crop "100x100+0+16" +repage '/var/folders/v8/_wdmzq9s7tvb2gs01pgclx9r0000gn/T/16e19f7a6aa75e4cf41a94b7a9d5c95920180528-33281-pl1o5j'
+[paperclip] Trying to link /var/folders/v8/_wdmzq9s7tvb2gs01pgclx9r0000gn/T/16e19f7a6aa75e4cf41a94b7a9d5c95920180528-33281-pl1o5j to /var/folders/v8/_wdmzq9s7tvb2gs01pgclx9r0000gn/T/3eccdbc6f9c09560d4c2b030535e235f20180528-33281-1b1g3r2
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:User> at /Users/hayashiyoshino/projects/mooovi3/app/models/user.rb:7)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:User> at /Users/hayashiyoshino/projects/mooovi3/app/models/user.rb:7)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddNicknameToUsers (20180528081643)
+  [1m[35m (35.5ms)[0m  ALTER TABLE `users` ADD `nickname` varchar(255)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20180528081643')
+  [1m[36m (17.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi3_development'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `products`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi3_development'
+  AND fk.table_name = 'reviews'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `reviews`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'mooovi3_development'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
