@@ -16,7 +16,26 @@
               <div style="text-align: right">
                 <a href="/products/<%= @product.id %>/reviews/new">この作品を投稿する</a>
               </div>
+
               <header class="header header--section">
+                <h2 class="text-middle gray-line">
+                  <i class="icon-movie color-gray-light"></i>監督
+                </h2>
+                  <p class="arasuzi">
+                  <%= @product.director %>
+                </p>
+                <h2 class="text-middle gray-line">
+                  <i class="icon-movie color-gray-light"></i>公開日
+                </h2>
+                  <p class="arasuzi">
+                  <%= @product.open_date %>
+                </p>
+                <h2 class="text-middle gray-line">
+                  <i class="icon-movie color-gray-light"></i>あらすじ
+                </h2>
+                 <p class="arasuzi">
+                  <%= @product.detail %>
+                 </p>
                 <h2 class="text-middle">
                   <i class="icon-movie color-gray-light"></i>みんなのレビュー
                 </h2>
